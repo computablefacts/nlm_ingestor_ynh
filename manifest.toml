@@ -1,9 +1,9 @@
 packaging_format = 2
 
-id = "docker_swarm"
-name = "Docker Swarm template"
-description.en = "Deploy an app with Docker Swarm"
-description.fr = "Déployez une application grâce à Docker Swarm"
+id = "nlm_ingestor_ynh"
+name = "NLM Ingestor for LLM Sherpa"
+description.en = "Provides the service code for llmsherpa API to connect. This repo contains custom RAG (retrieval augmented generation) friendly parsers for the following file formats: PDF, HTML, Text."
+description.fr = "Fournit le code de service permettant à l'API llmsherpa de se connecter. Ce dépôt contient des analyseurs personnalisés adaptés aux RAG (retrieval augmented generation) pour les formats de fichiers suivants : PDF, HTML, Texte."
 
 version = "1.0~ynh1"
 
@@ -12,9 +12,7 @@ maintainers = ["pbrisacier@mncc.fr"]
 [upstream]
 # NB: Only the "license" key is mandatory. Remove entries for which there's no relevant data
 license = "apache-2.0"
-website = "https://www.docker.com/"
-userdoc = "https://docs.docker.com/engine/swarm/"
-code = "https://github.com/docker/engine"
+code = "https://github.com/nlmatics/nlm-ingestor"
 
 [integration]
 yunohost = ">= 11.1.21"
@@ -34,7 +32,7 @@ ram.runtime = "50M"
     [install.path]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
-    default = "/mydockerapp"
+    default = "/nlm-ingestor"
 
     [install.init_main_permission]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
